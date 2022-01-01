@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
   <title>bendang</title>
@@ -49,6 +49,35 @@
 
 .blog-container .blog-content h3 {font-size:25px}
 
+.button {
+  display: inline-block;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.medals {
+  width: 2.5%;
+  /*max-width: 40%;*/
+  height: auto;
+}
+
 </style>
 
 </head>
@@ -57,28 +86,53 @@
   <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item is-hidden-desktop">
-        <a href="https://github.com/bendangnuksung" class="icon is-large has-text-light">
+        <a href="https://github.com/bendangnuksung" class="icon is-large has-text-light" target="_blank">
           <i class="fab fa-2x fa-github"></i>
         </a>
       </div>
       <div class="navbar-item is-hidden-desktop">
-        <a href="https://twitter.com/bendangnuksung" class="icon is-large has-text-light">
+        <a href="https://twitter.com/bendangnuksung" class="icon is-large has-text-light" target="_blank">
           <i class="fab fa-2x fa-twitter"></i>
+        </a>
+      </div>
+
+      <div class="navbar-item is-hidden-desktop">
+        <a href="https://www.kaggle.com/bendang" class="icon is-large has-text-light" target="_blank">
+          <i class="fab fa-2x fa-kaggle"></i>
+        </a>
+      </div>
+
+      <div class="navbar-item is-hidden-desktop">
+        <a href="https://www.linkedin.com/in/bendangnuksung" class="icon is-large has-text-light" target="_blank">
+          <i class="fab fa-2x fa-linkedin"></i>
         </a>
       </div>
     </div>
     <div class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item">
-          <a href="https://github.com/bendangnuksung" class="icon is-large has-text-light">
+          <a href="https://github.com/bendangnuksung" class="icon is-large has-text-light" target="_blank">
             <i class="fab fa-2x fa-github"></i>
           </a>
         </div>
         <div class="navbar-item">
-          <a href="https://twitter.com/bendangnuksung" class="icon is-large has-text-light">
+          <a href="https://twitter.com/bendangnuksung" class="icon is-large has-text-light" target="_blank">
             <i class="fab fa-2x fa-twitter"></i>
           </a>
         </div>
+
+        <div class="navbar-item">
+          <a href="https://www.kaggle.com/bendang" class="icon is-large has-text-light" target="_blank">
+            <i class="fab fa-2x fa-kaggle"></i>
+          </a>
+        </div>
+
+        <div class="navbar-item">
+          <a href="https://www.linkedin.com/in/bendangnuksung" class="icon is-large has-text-light" target="_blank">
+            <i class="fab fa-2x fa-linkedin"></i>
+          </a>
+        </div>
+
       </div>
     </div>
   </nav>
@@ -173,8 +227,10 @@
                 </figure>
                 <p> 
                   <br>
-                  <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot"><img src="https://img.shields.io/badge/dynamic/json?url=http://34.72.210.131:5000/getstat&amp;label=Servers&amp;query=$.n_servers&amp;color=green" alt="Server" /></a> &nbsp; &nbsp; &nbsp;
-                  <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot"><img src="https://img.shields.io/badge/dynamic/json?url=http://34.72.210.131:5000/getstat&amp;label=Unique%20User&amp;query=$.n_users&amp;color=success" alt="Users" /></a>
+<!--                  <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot"><img src="https://img.shields.io/badge/dynamic/json?url=http://164.52.192.139:5000/getstat&amp;label=Servers&amp;query=$.n_servers&amp;color=green" alt="Server" /></a> &nbsp; &nbsp; &nbsp;-->
+<!--                  <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot"><img src="https://img.shields.io/badge/dynamic/json?url=http://164.52.192.139:5000/getstat&amp;label=Unique%20User&amp;query=$.n_users&amp;color=success" alt="Users" /></a>-->
+                  <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot" target="_blank"> <button class="button">Add Bot</button> </a>
+
                 </p>
               </article>
             </div>
@@ -183,6 +239,8 @@
       </div>
       <h2 class="subtitle"><a href="https://github.com/search?q=user%3Abendangnuksung+">More Projects</a></h2>
   </section>
+
+
 
 
 
@@ -203,6 +261,49 @@
 
 
 
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Kaggle Competitions</h1>
+      <hr />
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <a href="https://www.kaggle.com/c/sartorius-cell-instance-segmentation/leaderboard" target="_blank"> <img src="img/sartorius.jpg" alt="Placeholder image"> </a>
+              </figure>
+            </div>
+            <div class="media-content">
+              <a href="https://www.kaggle.com/c/sartorius-cell-instance-segmentation/leaderboard" target="_blank"><p class="title is-4">Sartorius - Cell Instance Segmentation</p></a>
+<!--              <br>-->
+               <p class="subtitle is-4">   <img src="https://www.kaggle.com/static/images/medals/competitions/silverl@1x.png" class="medals" alt="Placeholder image"> Top 5%   -   66/1559
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <a href="https://www.kaggle.com/c/global-wheat-detection/leaderboard" target="_blank"> <img src="img/global_wheat.jpg" alt="Placeholder image"> </a>
+              </figure>
+            </div>
+            <div class="media-content">
+              <a href="https://www.kaggle.com/c/global-wheat-detection/leaderboard" target="_blank"><p class="title is-4">Global Wheat Detection</p></a>
+<!--              <br>-->
+               <p class="subtitle is-4">   <img src="https://www.kaggle.com/static/images/medals/competitions/bronzel@1x.png" class="medals" alt="Placeholder image"> Top 10%   -   208/2245
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </section>
 
 
   <section class="section">
