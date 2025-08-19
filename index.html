@@ -23,7 +23,6 @@
 </script>
 
 
-
 <style>
 * {
   box-sizing: border-box;
@@ -79,6 +78,27 @@
   height: auto;
 }
 
+/* Prevent project images inside fixed-ratio wrappers from distorting */
+.image.is-3by2 img,
+.image.is-4by3 img,
+.image.is-16by9 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Allow opting into full image visibility (no cropping) inside fixed-ratio wrappers */
+.project-image--contain img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+}
+
+/* Edge-to-edge images inside project cards while keeping aspect ratio and NO cropping */
+.project-card { overflow: hidden; }
+.box .project-image--edge { margin-left: -1.25rem; margin-right: -1.25rem; }
+.project-image--edge img { width: 100%; height: auto; display: block; object-fit: contain; }
+
 </style>
 
 </head>
@@ -117,7 +137,7 @@
           </a>
         </div>
         <div class="navbar-item">
-          <a href="https://twitter.com/bendangnuksung" class="icon is-large has-text-light" target="_blank">
+          <a href="https://twitter.com/_bendang_" class="icon is-large has-text-light" target="_blank">
             <i class="fab fa-2x fa-twitter"></i>
           </a>
         </div>
@@ -154,7 +174,7 @@
               Bendangnuksung
             </h1>
             <h2 class="subtitle">
-              ML Developer @CamCom, Bengaluru
+              ML Developer @Protolabs Network, Amsterdam
             </h2>
             <p>
               <a href="https://docs.google.com/document/d/1RdgI_I3YUBS2McTU9AMKW2SMIxnMJIWmBeaqhoSIaCE/preview" class="icon has-text-light" target="_blank">
@@ -171,7 +191,7 @@
     <div class="container">
       <h1 class="title">About Me</h1>
       <hr />
-      <p>I'm an Indian based machine learning engineer working mostly on computer vision and deep learning applications.  On my free time I like to develop or contribute to opensource and play Dota.</p>
+      <p>I’m a machine learning engineer based in Amsterdam, specializing in deep learning applications. In my free time, I enjoy contributing to open-source projects, playing dota, and climbing</p>
     </div>
   </section>
 
@@ -179,63 +199,72 @@
     <div class="container">
       <h1 class="title">Personal Projects</h1>
       <hr />
-      <div class="tile is-ancestor">
-        <div class="tile is-vertical is-12">
-          <div class="tile">
-            <div class="tile is-parent">
-              <article class="tile is-child notification">
-                <p class="title">Img OutPainting</p>
-                <p>
-                  &nbsp;&nbsp;<a href="https://github.com/bendangnuksung/Image-OutPainting/stargazers/"><img src="https://img.shields.io/github/stars/bendangnuksung/Image-OutPainting.svg?style=social&amp;label=Star&amp;maxAge=2592000" alt="GitHub stars"/></a> 
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <a href="https://GitHub.com/bendangnuksung/Image-OutPainting/network/"><img src="https://img.shields.io/github/forks/bendangnuksung/Image-OutPainting.svg?style=social&amp;label=Fork&amp;maxAge=2592000" alt="GitHub forks" /></a>
-                </p>
-                <figure class="image is-3by2">
-                  <a href="https://github.com/bendangnuksung/Image-OutPainting">
-                  <img src="img/outpainting/outpainting.jpg">
-                </a>
-                </figure>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification">
-                <p class="title">Fortnite - PUBG</p>
-                <p>
-                  &nbsp;&nbsp;<a href="https://github.com/bendangnuksung/fortnite-pubg/stargazers/"><img src="https://img.shields.io/github/stars/bendangnuksung/fortnite-pubg.svg?style=social&amp;label=Star&amp;maxAge=2592000" alt="GitHub stars"/></a> 
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <a href="https://GitHub.com/bendangnuksung/fortnite-pubg/network/"><img src="https://img.shields.io/github/forks/bendangnuksung/fortnite-pubg.svg?style=social&amp;label=Fork&amp;maxAge=2592000" alt="GitHub forks" /></a>
-                </p>
-                <figure class="image is-4by3">  
-                <a href="https://github.com/bendangnuksung/fortnite-pubg">              
-                  <img src="img/fortnite_pubg/fortnite_pubg_demo.gif">
-                </a>
-                </figure>
-              </article>
-            </div>
-            <div class="tile is-parent">
-              <article class="tile is-child notification">
-                <p class="title">BOTA</p>
-                <p>
-                  &nbsp;&nbsp;<a href="https://github.com/bendangnuksung/bota/stargazers/"><img src="https://img.shields.io/github/stars/bendangnuksung/bota.svg?style=social&amp;label=Star&amp;maxAge=2592000" alt="GitHub stars"/></a> 
-                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-                  <a href="https://GitHub.com/bendangnuksung/bota/network/"><img src="https://img.shields.io/github/forks/bendangnuksung/bota.svg?style=social&amp;label=Fork&amp;maxAge=2592000" alt="GitHub forks" /></a> <br>
-                  
-                </p>
-                <figure class="image is-4by3">
-                  <a href="https://github.com/bendangnuksung/bota">
-                  <img src="img/bota/bota-demo.gif">
-                </a>
-                </figure>
-                <p> 
-                  <br>
-<!--                  <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot"><img src="https://img.shields.io/badge/dynamic/json?url=http://164.52.192.139:5000/getstat&amp;label=Servers&amp;query=$.n_servers&amp;color=green" alt="Server" /></a> &nbsp; &nbsp; &nbsp;-->
-<!--                  <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot"><img src="https://img.shields.io/badge/dynamic/json?url=http://164.52.192.139:5000/getstat&amp;label=Unique%20User&amp;query=$.n_users&amp;color=success" alt="Users" /></a>-->
-                  <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot" target="_blank"> <button class="button">Add Bot</button> </a>
+      <div class="columns is-multiline is-mobile">
+        <div class="column is-full-mobile is-half-tablet is-half-desktop">
+          <article class="box project-card">
+            <p class="title">Img OutPainting</p>
+            <p>
+              &nbsp;&nbsp;<a href="https://github.com/bendangnuksung/Image-OutPainting/stargazers/"><img src="https://img.shields.io/github/stars/bendangnuksung/Image-OutPainting.svg?style=social&amp;label=Star&amp;maxAge=2592000" alt="GitHub stars"/></a>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <a href="https://GitHub.com/bendangnuksung/Image-OutPainting/network/"><img src="https://img.shields.io/github/forks/bendangnuksung/Image-OutPainting.svg?style=social&amp;label=Fork&amp;maxAge=2592000" alt="GitHub forks" /></a>
+            </p>
+            <figure class="image project-image--edge">
+              <a href="https://github.com/bendangnuksung/Image-OutPainting" target="_blank">
+                <img src="img/outpainting/outpainting.jpg" alt="Image OutPainting preview">
+              </a>
+            </figure>
+          </article>
+        </div>
 
-                </p>
-              </article>
-            </div>
-          </div>
+        <div class="column is-full-mobile is-half-tablet is-half-desktop">
+          <article class="box project-card">
+            <p class="title">Aolingo</p>
+            <p>
+              Ao ↔ English translator - <a href="https://aolingo.in" target="_blank">aolingo.in</a>
+            </p>
+            <figure class="image project-image--edge">
+              <a href="https://aolingo.in" target="_blank">
+                <img src="img/aolingo_screenshot.jpg" alt="Aolingo screenshot">
+              </a>
+            </figure>
+          </article>
+        </div>
+
+        <div class="column is-full-mobile is-half-tablet is-half-desktop">
+          <article class="box">
+            <p class="title">Fortnite - PUBG</p>
+            <p>
+              &nbsp;&nbsp;<a href="https://github.com/bendangnuksung/fortnite-pubg/stargazers/"><img src="https://img.shields.io/github/stars/bendangnuksung/fortnite-pubg.svg?style=social&amp;label=Star&amp;maxAge=2592000" alt="GitHub stars"/></a>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <a href="https://GitHub.com/bendangnuksung/fortnite-pubg/network/"><img src="https://img.shields.io/github/forks/bendangnuksung/fortnite-pubg.svg?style=social&amp;label=Fork&amp;maxAge=2592000" alt="GitHub forks" /></a>
+            </p>
+            <figure class="image is-4by3">
+              <a href="https://github.com/bendangnuksung/fortnite-pubg" target="_blank">
+                <img src="img/fortnite_pubg/fortnite_pubg_demo.gif" alt="Fortnite to PUBG demo">
+              </a>
+            </figure>
+          </article>
+        </div>
+
+        <div class="column is-full-mobile is-half-tablet is-half-desktop">
+          <article class="box">
+            <p class="title">BOTA</p>
+            <p>
+              &nbsp;&nbsp;<a href="https://github.com/bendangnuksung/bota/stargazers/"><img src="https://img.shields.io/github/stars/bendangnuksung/bota.svg?style=social&amp;label=Star&amp;maxAge=2592000" alt="GitHub stars"/></a>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <a href="https://GitHub.com/bendangnuksung/bota/network/"><img src="https://img.shields.io/github/forks/bendangnuksung/bota.svg?style=social&amp;label=Fork&amp;maxAge=2592000" alt="GitHub forks" /></a>
+              <br>
+            </p>
+            <figure class="image is-4by3">
+              <a href="https://github.com/bendangnuksung/bota" target="_blank">
+                <img src="img/bota/bota-demo.gif" alt="BOTA demo">
+              </a>
+            </figure>
+            <p>
+              <br>
+              <a href="https://discordapp.com/api/oauth2/authorize?client_id=501100945405378562&amp;permissions=388176&amp;scope=bot" target="_blank"><button class="button">Add Bot</button></a>
+            </p>
+          </article>
         </div>
       </div>
       <h2 class="subtitle"><a href="https://github.com/search?q=user%3Abendangnuksung+">More Projects</a></h2>
@@ -288,38 +317,51 @@
 
 
 
-
-  <section class="section">
-    <div class="container">
-      <h1 class="title">Personal Blog</h1>
-    <div class="blog-container">
-    <a href="https://towardsdatascience.com/scaling-machine-learning-models-using-tensorflow-serving-kubernetes-ed00d448c917">
-    <img src="https://miro.medium.com/max/1400/1*3SbRO6tOaXCGyr6oHrpw2w.jpeg" alt="Notebook" style="width:100%;">
-    <div class="blog-content">
-      <h3>Scaling Machine Learning models using Tensorflow Serving & Kubernetes </h3>
-      <p>A developer’s guide to put ML models on production and scale</p>
-    </div>
-  </a>
-  </div>
-</div></section>
-
-
   <section class="section">
     <div class="container">
       <h1 class="title">Experience</h1>
       <hr />
+
       <div class="card">
         <div class="card-content">
           <div class="media">
             <div class="media-left">
               <figure class="image is-48x48">
-                <img src="img/camcom-logo.png" alt="Placeholder image">
+                <img src="img/protolabs-network-logo.png" alt="Placeholder image">
               </figure>
             </div>
             <div class="media-content">
-              <p class="title is-4">Gifto Retail Technologies Pvt Ltd</p>
-              <p class="subtitle is-6">Machine Learning Engineer | <time datetime="2018-8">August 2018</time> - <time
-                  datetime="2020-1">Present</time> </p>
+              <p class="title is-4">Protolabs Network </p>
+              <p class="subtitle is-6">Machine Learning Engineer | Amsterdam, Netherlands | <time datetime="2022-8">September 2022</time> - <time
+                  datetime="2025-8">Present</time> </p>
+            </div>
+          </div>
+          <div class="content">
+            <p></p>
+            <div class="tags">
+              <span class="tag">python</span>
+              <span class="tag">pytorch</span>
+              <span class="tag">polars</span>
+              <span class="tag">pandas</span>
+              <span class="tag">prefect</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+
+      <div class="card">
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="img/camcom-logo.svg" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">CamCom </p>
+              <p class="subtitle is-6">Machine Learning Engineer | Bengaluru, India | <time datetime="2018-8">August 2018</time> - August 2022 </p>
             </div>
           </div>
           <div class="content">
@@ -345,7 +387,7 @@
             </div>
             <div class="media-content">
               <p class="title is-4">Mialo Technologies Pvt. Ltd</p>
-              <p class="subtitle is-6">Machine Learning Engineer | <time datetime="2018-4">April 2018</time> - <time
+              <p class="subtitle is-6">Machine Learning Engineer | Bengaluru, India | <time datetime="2018-4">April 2018</time> - <time
                   datetime="2018-7">July 2018</time></p>
             </div>
           </div>
@@ -370,7 +412,7 @@
             </div>
             <div class="media-content">
               <p class="title is-4">Primenumbers Technologies</p>
-              <p class="subtitle is-6">Software Engineer Intern | <time datetime="2017-10">October 2017</time> - <time
+              <p class="subtitle is-6">Software Engineer Intern | Bengaluru, India | <time datetime="2017-10">October 2017</time> - <time
                   datetime="2018-3">March 2018</time></p>
             </div>
           </div>
@@ -387,6 +429,25 @@
 
     </div>
   </section>
+
+
+
+  <section class="section">
+    <div class="container">
+      <h1 class="title">Personal Blog</h1>
+    <div class="blog-container">
+    <a href="https://towardsdatascience.com/scaling-machine-learning-models-using-tensorflow-serving-kubernetes-ed00d448c917">
+    <img src="https://miro.medium.com/max/1400/1*3SbRO6tOaXCGyr6oHrpw2w.jpeg" alt="Notebook" style="width:100%;">
+    <div class="blog-content">
+      <h3>Scaling Machine Learning models using Tensorflow Serving & Kubernetes </h3>
+      <p>A developer’s guide to put ML models on production and scale</p>
+    </div>
+  </a>
+  </div>
+</div></section>
+
+
+
   <section class="section">
     <div class="container">
       <h1 class="title">Contact</h1>
@@ -402,18 +463,18 @@
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <a href="https://twitter.com/bendangnuksung" class="icon is-large">
+            <a href="https://twitter.com/_bendang_" class="icon is-large">
               <i class="fab fa-2x fa-twitter"></i>
             </a>
-            <p class="heading"><a href="https://twitter.com/bendangnuksung">@bendangnuksung</a></p>
+            <p class="heading"><a href="https://twitter.com/_bendang_">@_bendang_</a></p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <a href="mailto:bendangnuksungimsong@gmail.com" class="icon is-large">
+            <a href="mailto:bendang2411@gmail.com" class="icon is-large">
               <i class="fas fa-2x fa-envelope"></i>
             </a>
-            <p class="heading"><a href="mailto:bendangnuksungimsong@gmail.com">bendangnuksungimsong@gmail.com</a></p>
+            <p class="heading"><a href="mailto:bendang2411@gmail.com">bendang2411@gmail.com</a></p>
           </div>
         </div>
         <div class="level-item has-text-centered">
@@ -427,6 +488,7 @@
       </nav>
     </div>
   </section>
+
 
   <!-- Modals -->
 <!--   <div id="project-1-modal" class="modal">
